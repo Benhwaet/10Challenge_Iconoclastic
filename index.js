@@ -35,7 +35,7 @@ const promptUser = () => {
         {
         type: "input",
         name: "color",
-        message: "What color would you like the shape to be?"
+        message: "What color, by name or hexadecimal, would you like the shape to be?"
         }
     ]);
 };
