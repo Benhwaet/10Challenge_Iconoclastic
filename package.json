@@ -1,0 +1,20 @@
+{
+  "name": "10challenge_iconoclastic",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Benhwaet",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
