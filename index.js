@@ -1,7 +1,7 @@
 //packages needed for this application
 const inquirer = require("inquirer");
 const { writeFile } = require("fs").promises;
-const generateSVG = require("./assets//utils/generateSVG");
+const generateSVG = require("./assets/utils/generateSVG.js");
 
 //function to prompt user for answers
 const promptUser = () => {
@@ -23,8 +23,8 @@ const promptUser = () => {
         },
         {
         type: "input",
-        name: "text-colour",
-        message: "What colour would you like the text to be?"
+        name: "text-color",
+        message: "What color would you like the text to be?"
         },
         {
         type: "list",

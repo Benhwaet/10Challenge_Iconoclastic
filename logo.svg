@@ -1,0 +1,4 @@
+<svg id="circle" viewBox="0 0 600 400" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle r="150" cx="300" cy="200" fill="undefined"/>
+        <text x="300" y="225" font-size="60" text-anchor="middle" fill="undefined">BMD</text>
+    </svg>
