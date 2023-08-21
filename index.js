@@ -1,5 +1,6 @@
-
-
+const promptUser = require('./lib/prompts.js');
+const generateSVG = require('./lib/generateSVG.js');
+const { writeFile } = require('fs');
 
 // function to generate SVG markup
 const init = () => {
