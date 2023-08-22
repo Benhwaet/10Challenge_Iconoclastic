@@ -8,12 +8,17 @@ const init = () => {
         const answers = promptUser()
         // to avoid a callback error, looked up solution on bobbyhadz.com, 
         //can be written otherwise, will try this first
-        try {
-            writeFile('logo.svg', generateSVG(answers))
-           console.log('Successfully wrote to logo.svg');
-        } catch (err) {
-                console.log(err.message);
-        }
+        .then((answers) => {
+            const svg = generateSVG(answers.shapeColor, answers.text, answers.textColor);
+            writeFile("./example/logo.svg", svg, (err) => {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log("Successfully wrote to index.html");
+                }
+            });
+        });
+
     };
 
 
