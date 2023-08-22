@@ -4,18 +4,17 @@ const { writeFile } = require('fs');
 
 
 // function to generate SVG markup
-const init = async () => {
-    promptUser()
-    // to avoid a callback error, looked up solution on bobbyhadz.com, 
-    //can be written otherwise, will try this first
-        .then((answers) => writeFile('logo.svg', generateSVG(answers), err => {
-            if (err) {
+const init = () => {
+        const answers = promptUser()
+        // to avoid a callback error, looked up solution on bobbyhadz.com, 
+        //can be written otherwise, will try this first
+        try {
+            writeFile('logo.svg', generateSVG(answers))
+           console.log('Successfully wrote to logo.svg');
+        } catch (err) {
                 console.log(err.message);
-                throw err;
-            }
-        console.log('Successfully wrote to logo.svg');
-    })
-)};
+        }
+    };
 
 
 
