@@ -66,9 +66,10 @@ const promptUser = () => {
 // function to generate SVG markup
 const init = () => {
     promptUser()
-        .then((answers) => writeFile('./examples/logo.svg', generateSVG(answers)))
-        .then(() => console.log('Success!'))
-        .catch((err) => console.log(err))          
+        .then((answers) => writeFile('./examples/logo.svg', generateSVG(answers), (err) => 
+        err ? console.log(err) : console.log ("Success!")))
+        // .then(() => console.log('Success!'))
+        // .catch((err) => console.log(err))          
     };
 
 //call to initialize app
