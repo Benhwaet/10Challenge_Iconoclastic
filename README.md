@@ -48,7 +48,7 @@ The repository can be found at <https://github.com/Benhwaet/Iconoclastic>
 ## Usage
 
 The project can be run after the installation steps above. The user must simply be in the main project folder and enter ```node index.js``` to begin the program, questions will then be generated to ask the user to choose a shape, a shape color, three characters, the text color, and the generated logo's file's name.
-To view a video showing the app in use, visit <>
+To view a video showing the app in use, visit <https://drive.google.com/file/d/1HpSu59IyXOA176VbfIJnJnzXwBusD0jy/view?usp=sharing>
 
 ## Credits
 
