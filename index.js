@@ -70,9 +70,7 @@ const promptUser = () => {
 const init = () => {
     promptUser()
         .then((answers) => writeFile(`./examples/${answers.fileName}.svg`, generateSVG(answers), (err) => 
-        err ? console.log(err) : console.log ("Success!")))
-        // .then(() => console.log('Success!'))
-        // .catch((err) => console.log(err))          
+        err ? console.log(err) : console.log ("Success!")))        
     };
 
 //call to initialize app
