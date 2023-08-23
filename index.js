@@ -1,6 +1,3 @@
-// const promptUser = require('./lib/prompts.js');
-
-
 const inquirer = require("inquirer");
 const validateColor = require("validate-color").default;
 const generateSVG = require('./lib/generateSVG.js');
@@ -14,7 +11,7 @@ const promptUser = () => {
             type: "list",
             name: "shape",
             message: "Which shape would you like to use?",
-            choices: ["Triangle", "Square", "Circle"]
+            choices: ["Circle", "Square", "Triangle"]
         },
         {
             type: "input",
@@ -60,13 +57,19 @@ const promptUser = () => {
                     return "Please enter a valid color.";
                 }
             }
+        },
+        {
+            type: "input",
+            name: "fileName",
+            message: "What would you like to call your SVG logo?"
         }
     ]);
 };
+
 // function to generate SVG markup
 const init = () => {
     promptUser()
-        .then((answers) => writeFile('./examples/logo.svg', generateSVG(answers), (err) => 
+        .then((answers) => writeFile(`./examples/${answers.fileName}.svg`, generateSVG(answers), (err) => 
         err ? console.log(err) : console.log ("Success!")))
         // .then(() => console.log('Success!'))
         // .catch((err) => console.log(err))          
